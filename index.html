@@ -118,6 +118,17 @@
                     </span>
                     <span>Dataset</span>
                     </a>
+                </span>
+                <!-- Model Link. -->
+                <span class="link-block">
+                  <a href="https://huggingface.co/OutFlankShu/MATE_Models/"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face Logo" width="20" height="20">
+                    </span>
+                    <span>Model</span>
+                    </a>
+                </span>
               </div>
   
             </div>
@@ -178,20 +189,44 @@
       <!-- Dataset Overview -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Dataset Overview</h2>
+          <h2 class="title is-3">Dataset Summary</h2>
           <div class="content has-text-justified">
-            <p>
-              We create four sub-dataset based on the MATE: (i) MATE-No-Explanation: given chess positions, the candidate moves are provided without strategical nor tactical explanation; 
-              (ii) MATE-Strategy: given chess positions, the candidate moves are provided with strategical elaboration; 
-              (iii) MATETactic: given chess positions, candidate moves are provided with tactical description; 
-              (iv) MATEStrategy&Tactic: given chess positions, candidate moves are provided with both strategy and tactic.
-              For chess strategy annotation, we categorize the future strategical plan into five kinds: (i) material count, (ii) piece activity, (iii) pawn structure, (iv) space, and (v) king safety.
-              For chess tactic annotation, we list the sequence of moves and provide a factual description of the resulting position. Unlike search algorithms that explore long tactical reasoning chains, our approach focuses on short-term calculations, limiting the move sequence length.
-            </p>
+            <img style='height: auto; width: 93%; object-fit: contain' src="static/images/Dataset_Summary.png"">
+            <img style='height: auto; width: 93%; object-fit: contain' src="static/images/Dataset_example.png"">
           </div>
         </div>
       </div>
       <!--/ Dataset Overview  -->
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Experimental Results -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Experimental Results</h2>
+          <div class="content has-text-justified">
+            <img style='height: auto; width: 93%; object-fit: contain' src="static/images/Experiment.png"">
+          </div>
+        </div>
+      </div>
+      <!--/ Experimental Results  -->
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Examples -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Case Study</h2>
+          <div class="content has-text-justified">
+            <img style='height: auto; width: 93%; object-fit: contain' src="static/images/case_study_claude.png"">
+          </div>
+        </div>
+      </div>
+      <!--/ Examples  -->
     </div>
   </section>
   
