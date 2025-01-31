@@ -145,18 +145,28 @@
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <div class="columns is-centered">
-            <img style='height: auto; width: 93%; object-fit: contain' src="static/images/abstract_dual_chess.png"">
+            <figure>
+              <img style='height: auto; width: 93%; object-fit: contain' src="static/images/abstract_dual_chess.png">
+              <figcaption class="is-size-5 has-text-centered" style="font-family: 'Times New Roman', Times, serif;">Figure 1: Strategy and Tactic (a)White E2 pawn moves to E4, takes 
+                more space in the center, and exerts pressure on black. Black will have a hard time struggling to develop 
+                its pieces. (b)White E2 bishop moves to F3 and pins the knight on C6. The black knight cannot move, or the 
+                A8 rook behind the knight will be taken. White will take black knight for free in the next move.</figcaption>
+            </figure>
+            </div>
           </div>
+        </div>
         </div>
       </div>
     </div>
   </section>
+  
+
 
   <section class="section">
     <div class="container is-max-desktop">
       <!-- Introduction -->
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
+        <div class="column is-full">
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified abstract-section">
             <p>
@@ -164,8 +174,8 @@
               with the advent of large-scale datasets, pretrained large language models have emerged with 
               new capabilities, including reasoning. However, these models still struggle with long-term, 
               complex reasoning tasks, such as playing chess. Based on the observation that expert chess 
-              players employ a dual approach combining <strong>long-term strategic</strong> play with <strong>short-term tactical</strong>
-              play along with language explanation, we propose improving the reasoning capability of 
+              players employ a dual approach combining <strong>long-term strategic play</strong> with <strong>short-term tactical
+              play</strong> along with language explanation, we propose improving the reasoning capability of 
               large language models in chess by integrating annotated strategy and tactic. Specifically, 
               we collect a dataset named <strong>MATE</strong>, which consists of 1 million chess positions 
               with candidate moves annotated by chess experts for strategy and tactics. We finetune the 
@@ -188,20 +198,30 @@
         <div class="column is-four-fifths">
           <h2 class="title is-3">Dataset Overview</h2>
           <div class="content has-text-justified">
-            <img style='height: auto; width: 93%; object-fit: contain' src="static/images/Dataset_example.png"">
-            <img style='height: auto; width: 93%; object-fit: contain' src="static/images/Dataset_Summary.png"">
+            <figure>
+              <img src="static/images/Dataset_example.png" alt="Dataset Example" style="width: 100%; height: auto;">
+              <figcaption class="is-size-5 has-text-centered" style="font-style: normal; font-family: 'Times New Roman', Times, serif;">
+                Figure 2: A data example in MATE-Strategy&Tactic.</figcaption>
+            </figure>
+            <figure>
+              <img src="static/images/Dataset_Summary.png" alt="Dataset Summary" style="width: 100%; height: auto;">
+              <figcaption class="is-size-5 has-text-centered" style="font-style: normal; font-family: 'Times New Roman', Times, serif;">
+                Figure 3: Dataset Summary (a)Distribution of samples across the MATE subsets. (b)Distribution of strategy 
+                in the MATE. (c)Distribution of tactic in the MATE.</figcaption>
+            </figure>
           </div>
         </div>
       </div>
       <!--/ Dataset Overview  -->
     </div>
   </section>
+  
 
   <section class="section">
     <div class="container is-max-desktop">
       <!-- Experimental Results -->
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
+        <div class="column is-full">
           <h2 class="title is-3">Experimental Results</h2>
           <div class="content has-text-justified abstract-section">
             <img style='height: 180%; width: 180%; object-fit: contain' src="static/images/Experiment.png">
@@ -219,9 +239,11 @@
         <div class="column is-four-fifths">
           <h2 class="title is-3">Case Study</h2>
           <div class="content has-text-justified">
-            <img style='height: auto; width: 93%; object-fit: contain' src="static/images/case_study_claude.png">
-            <img style='height: auto; width: 93%; object-fit: contain' src="static/images/case_study_o1.png">
-            <img style='height: auto; width: 93%; object-fit: contain' src="static/images/case_study_4o.png">
+            <div id="dataset-carousel" class="carousel">
+              <div class="item is-active"><img style='height: auto; width: 93%; object-fit: contain' src="static/images/case_study_claude.png"></div>
+              <div class="item is-active"><img style='height: auto; width: 93%; object-fit: contain' src="static/images/case_study_o1.png"></div>
+              <div class="item is-active"><img style='height: auto; width: 93%; object-fit: contain' src="static/images/case_study_4o.png"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -267,5 +289,21 @@
     </div>
   </footer>
   
+  <script>
+    // Initialize the carousel
+    document.addEventListener('DOMContentLoaded', function () {
+      const carousel = bulmaCarousel.attach('#dataset-carousel', {
+        slidesToScroll: 1, // Number of slides to scroll at a time
+        slidesToShow: 1,   // Number of slides to show at a time
+        loop: true,        // Enable infinite loop
+        autoplay: false,    // Enable autoplay
+        autoplaySpeed: 3000, // Autoplay interval in milliseconds
+        navigation: true,  // Show navigation arrows
+        pagination: false,  // Show pagination dots
+      });
+    });
+  </script>
 </body>
+</html>
+
 </html>
