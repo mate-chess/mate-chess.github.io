@@ -3,9 +3,9 @@ body {
 }
 
 .abstract-section {
-    font-size: 1.5rem; 
+    font-size: 1.2rem; 
     line-height: 1.5;
-    max-width: 70%; 
+    max-width: 150%; 
     margin: 0 auto; 
 }
 
@@ -162,3 +162,34 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+
+.carousel {
+  display: flex;
+  justify-content: center; /* 让整个轮播组件居中 */
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* 隐藏超出部分 */
+  width: 100%;
+  margin: 0 auto; /* 水平居中 */
+}
+
+.carousel .item {
+  display: none; /* 默认隐藏所有图片 */
+  width: 100%;
+  text-align: center; /* 图片居中 */
+}
+
+.carousel .item.is-active {
+  display: block; /* 显示当前激活的图片 */
+}
+
+.carousel img {
+  max-width: 100%; /* 图片宽度不超过容器宽度 */
+  height: auto; /* 高度自适应 */
+  margin: 0 auto; /* 图片水平居中 */
+}
+
+
+
+
